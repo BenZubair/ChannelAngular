@@ -1,0 +1,30 @@
+
+<h4> Channels List</h4>
+<hr>
+<br>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Channel Name </th>
+            <th> Address </th>
+            <th> Frequency Range</th>
+            <th> Description</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let channel of channel" >
+            <td> {{ channel.id }} </td>
+            <td> {{ channel.channelName }} </td>
+            <td> {{ channel.address }} </td>
+            <td> {{ channel.frequencyRange }} </td>
+            <td> {{ channel.channelDescription }} </td>
+            <td>
+                <button (click) = "channelUpdate(channel.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteChannel(channel.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "channelDetails(channel.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

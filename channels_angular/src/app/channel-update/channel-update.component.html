@@ -1,0 +1,53 @@
+<div class="col-md-10 offset-md-1">
+    <h4> Update Channel</h4>
+    <hr>
+    <br>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label> Channel Name</label>
+                    <input type="text" class ="form-control" id = "channelName"
+                        [(ngModel)] = "channels.channelName" name = "channelName">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label> Address:</label>
+                    <input type="text" class ="form-control" id = "address"
+                        [(ngModel)] = "channels.address" name = "address">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label> Frequency Range:</label>
+                    <input type="text" class ="form-control" id = "frequencyRange"
+                        [(ngModel)] = "channels.frequencyRange" name = "frequencyRange">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label> Description:</label>
+                    <input type="text" class ="form-control" id = "channelDescription"
+                        [(ngModel)] = "channels.channelDescription" name = "channelDescription">
+                </div>
+            </div>
+        </div>
+        
+        <p>
+        <div>
+          <button class = "btn btn-success" type ="submit">Submit</button>
+        </div>
+
+    </form>
+    </div>
